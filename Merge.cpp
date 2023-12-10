@@ -4,14 +4,31 @@ using namespace std;
 void sort(int arr[], int l, int r);
 void merge(int arr[], int l, int m, int r);
 int main(){
-
-        int a[6] = {2, 34, 34, 56, 77, 45};
-        sort(a, 0, 6);
-
-    for (size_t i = 0; i < 6; i++)
+        
+        int size;
+        cout<<"Enter the size of the array";
+        cin>>size;
+        //int a[7] = {2, 4, 34, 56, 77, 45};
+        int a[size];
+        
+        for (size_t i = 0; i < size; i++)
     {
         /* code */
-        cout<<arr[i]<<" ";
+        a[i] = 0;
+    }
+    
+    cout<<"Enter the elements of the array";
+    for (size_t i = 0; i < size; i++)
+    {
+        /* code */
+        cin>>a[i];
+    }
+        sort(a, 0, size);
+
+    for (size_t i = 0; i < size; i++)
+    {
+        /* code */
+        cout<<a[i]<<" ";
     }
     
     return 0;
@@ -80,7 +97,5 @@ void merge(int arr[], int l, int m, int r){
     i++;
     j++;
     }
-    
-    
     
 }
